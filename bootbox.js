@@ -62,7 +62,7 @@
       select:
         "<select class='bootbox-input bootbox-input-select form-control'></select>",
       checkbox:
-        "<div class='checkbox'><label><input class='bootbox-input bootbox-input-checkbox' type='checkbox' /></label></div>",
+        "<div class='form-check checkbox'><label class='form-check-label'><input class='form-check-input bootbox-input bootbox-input-checkbox' type='checkbox' /></label></div>",
       date:
         "<input class='bootbox-input bootbox-input-date form-control' autocomplete=off type='date' />",
       time:
@@ -197,7 +197,7 @@
           // always add a primary to the main option in a one or two-button dialog
           button.className = "btn-primary";
         } else {
-          button.className = "btn-default";
+          button.className = "btn-default btn-secondary";
         }
       }
     });
@@ -628,7 +628,7 @@
       var closeButton = $(templates.closeButton);
 
       if (options.title) {
-        dialog.find(".modal-header").prepend(closeButton);
+        dialog.find(".modal-header").append(closeButton);
       } else {
         closeButton.css("margin-top", "-2px").prependTo(body);
       }
